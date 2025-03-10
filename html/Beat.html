@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINF201 Final Project</title>
-    <link rel="stylesheet" href="BeatStyle.css">
-    <script src="code.js"></script>
+    <link rel="stylesheet" href="../css/BeatStyle.css">
+    <script src="../js/Home.js"></script>
 </head>
 <style>
     table {
@@ -45,66 +45,50 @@
     <div class="banner">
         <h1>Basics of Beat Production</h1>
         <button id="modeToggle">Light</button>
-        <a class = "backToMain" title="Back to Main" href="Home.html">Back to Main</a>
+        <a class="backToMain" title="Back to Main" href="Home.html">Back to Main</a>
     </div>
+
     <div class="headings">
-        <a class = "link" title = "Go to Basics of DAWs" href ="/Final Project/html/BasicsOfDaws.html">Basics of DAWs</a>
-        <a class = "link" title = "Go to Basics of Beat Production" href ="/Final Project/html/Beat.html">Basics of Beat Production</a>
-        <a class = "link" title = "Go to Basics of Chord Progressions" href ="/Final Project/html/Chord.html">Basics of Chord Progressions</a>
-        <a class = "link" title = "Go to Mixing & Mastering" href ="/Final Project/html/Mixing.html">Mixing & Mastering</a>
-        <a class = "link" title = "Go to Plugins & Other Resources" href ="/Final Project/html/Other.html">Plugins & Other Resources</a>class = "link" title = "Go to Plugins & Other Resources" href ="Other.html">Plugins & Other Resources</a>
+        <a class="link" title="Go to Basics of DAWs" href="BasicsOfDaws.html">Basics of DAWs</a>
+        <a class="link" title="Go to Basics of Beat Production" href="Beat.html">Basics of Beat Production</a>
+        <a class="link" title="Go to Basics of Chord Progressions" href="Chord.html">Basics of Chord Progressions</a>
+        <a class="link" title="Go to Mixing & Mastering" href="Mixing.html">Mixing & Mastering</a>
+        <a class="link" title="Go to Plugins & Other Resources" href="Other.html">Plugins & Other Resources</a>
     </div>
+
     <div class="container">
-            
-            <div class="center">
-                <h2>Some Simple Beats</h2>
-                <div class="about">  
-                    <img class = "imgLeft" width = "50%" src="Images/—Pngtree—drum silhouette music instrument_4509592.png"></img>
-                    <p>
-                        A drum beat is what provides rhythm and structure to most music. Typically, beats are arranged
-                        using different drum sounds in a repeating pattern.
-                        <ul>
-                            <li>
-                                <b>Step:</b> A single sound from a drum (shown below as a numbered column).
-                                For the example below, the beat is divided into 12 steps.
-                            </li>
-                            <li>
-                                <b>Measure/Bar:</b> A group of beats. Typically, the most common measure is 4 beats.
-                                The measures are shown within the small dividers.
-                            </li>
-                            <li>
-                                <b>Time Signature:</b> Determines how many beats are in a measure.
-                            </li>
-                            <li>
-                                <b>Tempo:</b> The speed of the beat, measured in BPM (beats per minute). The higher
-                                the BPM, the faster the beat. The example below is set to a BPM of 120.
-                                With all DAWs, you are able to adjust the BPM to your liking, but for this example
-                                we are using the standard tempo for most songs.
-                            </li>
-                        </ul>
-                    </p>
-                </div>
+        <div class="center">
+            <h2>Some Simple Beats</h2>
+            <div class="about">  
+                <img class="imgLeft" width="50%" src="../images/—Pngtree—drum silhouette music instrument_4509592.png" alt="Drum Silhouette">
+                <p>
+                    A drum beat provides rhythm and structure to most music. Beats are arranged
+                    using different drum sounds in a repeating pattern.
+                </p>
+                <ul>
+                    <li><b>Step:</b> A single sound from a drum (shown below as a numbered column). The beat is divided into 12 steps.</li>
+                    <li><b>Measure/Bar:</b> A group of beats. The most common measure contains 4 beats.</li>
+                    <li><b>Time Signature:</b> Determines how many beats are in a measure.</li>
+                    <li><b>Tempo:</b> The speed of the beat, measured in BPM (beats per minute). This example uses a standard tempo of 120 BPM.</li>
+                </ul>
             </div>
-            <div class="rightColumn">
-                <a target="_blank" class = "link" title = "More Basic Beats" href ="https://www.drumeo.com/beat/13-easy-beginner-drum-beats/?srsltid=AfmBOorHBFY9ORNxS0ZnhDKQhAsWy1IJzzhe93CGFKekNEEWcfrTEJiZ">More Beats</a>
-                <a target="_blank" class = "link" title = "Tips For Beats" href ="https://rhythmnotes.net/writing-drum-beats/">Tips</a>
-                <a target="_blank" class = "link" title = "Drum Sound Addins" href ="https://www.pianodreamers.com/best-drum-vst-plugins/">Drum Sound Addins</a>
-                <img class = "img" src="Images/measure.jpg"></img>
-                <img class = "img" src="Images/Drum desc.jpg"></img>
-            </div>
+        </div>
+
+        <div class="rightColumn">
+            <a target="_blank" class="link" title="More Basic Beats" href="https://www.drumeo.com/beat/13-easy-beginner-drum-beats/?srsltid=AfmBOorHBFY9ORNxS0ZnhDKQhAsWy1IJzzhe93CGFKekNEEWcfrTEJiZ">More Beats</a>
+            <a target="_blank" class="link" title="Tips For Beats" href="https://rhythmnotes.net/writing-drum-beats/">Tips</a>
+            <a target="_blank" class="link" title="Drum Sound Addins" href="https://www.pianodreamers.com/best-drum-vst-plugins/">Drum Sound Add-ins</a>
+            <img class="img" src="../images/measure.jpg" alt="Measure Example">
+            <img class="img" src="../images/drum desc.jpg" alt="Drum Description">
+        </div>
     </div>
+
     <div class="music">
         <h1>Drum Machine</h1>
         <h2>How to use</h2>
-        <p>
-            Below is a drum sequencer allowing you to create a simple beat. Click on the squares
-            to activate a beat for the respective drum sound. Once you have all your beats, click
-            play to hear your beat.
-        </p>
+        <p>Click on the squares below to activate a beat for the respective drum sound. Once you have all your beats, click "Play" to hear your beat.</p>
         <h2>Suggested Patterns</h2>
-        <p>
-            The "X" represents an active beat and the "-" represents a rest. Try it!
-        </p>
+        <p>The "X" represents an active beat, and the "-" represents a rest. Try it!</p>
         <table>
             <tr>
                 <th>Step</th>
@@ -156,7 +140,7 @@
                 <div class="beat" data-step="8"></div>
                 <div class="beat" data-step="9"></div>
                 <div class="beat" data-step="10"></div>
-                <div class="beat" data-step="11"></div>          
+                <div class="beat" data-step="11"></div>
             </div>
             <div class="row" data-sound="hihat">
                 <span class="label">Hi-Hat</span>
@@ -175,12 +159,12 @@
             </div>
         </div>
         <button id="playButton">Play</button>
-        <audio id="kick-sound" src="Music Files/drums/kick.wav"></audio>
-        <audio id="snare-sound" src="Music Files/drums/snare.wav"></audio>
-        <audio id="hihat-sound" src="Music Files/drums/hihat.wav"></audio>
-    </div>     
+        <audio id="kick-sound" src="../Music Files/drums/kick.wav"></audio>
+        <audio id="snare-sound" src="../Music Files/drums/snare.wav"></audio>
+        <audio id="hihat-sound" src="../Music Files/drums/hihat.wav"></audio>
+    </div>
     <div class="footer">
-        <p><a class = "link" title = "Go to Email" href="mailto:ezguro@albany.edu">Email Me!</a></p>
+        <p><a class="link" title="Go to Email" href="mailto:ezguro@albany.edu">Email Me!</a></p>
     </div>
 </body>
 </html>

@@ -6,6 +6,8 @@ body{
     flex-direction: column;
     overflow-x: hidden;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 body.light{
@@ -89,13 +91,20 @@ body.light .newLink:hover {
 .rightColumn{
     display:flex;
     flex-direction: column;
-    /* background-color: red; */
     width: 20%;
     border-left: 2px solid #101c14;
 }
 
 .music{
-  border-top: 2px solid black;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+    justify-content: center;
+    width: 100%; 
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .img{
@@ -177,20 +186,6 @@ body.light .about{
     box-sizing: border-box;
     transition: all 0.3 ease-in-out;
 }
-.sequencer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex-wrap: wrap;
-}
 
 .label {
     width: 50px;
@@ -200,33 +195,73 @@ body.light .about{
     padding-right: 10px;
 }
 
-.beat {
-    border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
+.chord-buttons {
+    margin: 20px 0;
 }
 
-.beat.active {
-    background-color: #00ff7f; /* Highlighted when selected */
+.chord-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    background-color: #39ff14;
+    color: #10271e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.beat.playing {
-    border-color: rgb(55, 155, 131); /* Flash when playing */
+.chord-btn:hover {
+    background-color: #2ecc71;
 }
 
-body.light .beat {
-    background-color: #b0ffb0;
-    border: 2px solid #013119;
+.piano {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    position: relative;
 }
 
-body.light .beat.active {
-    background-color: #135b1b;
+.key.white{
+    width: 50px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.key.black {
+    width: 35px;
+    height: 140px;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.key[data-note="C#"] {
+    left: 35px;
+}
+
+.key[data-note="D#"] {
+    left: 85px;
+}
+
+.key[data-note="F#"] {
+    left: 185px;
+}
+
+.key[data-note="G#"] {
+    left: 235px;
+}
+
+.key[data-note="A#"] {
+    left: 285px;
+}
+
+.key:active {
+    background-color: #ffdc00;
+    box-shadow: 0 0 10px rgba(255, 220, 0, 0.8);
 }

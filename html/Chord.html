@@ -4,62 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINF201 Final Project</title>
-    <link rel="stylesheet" href="BeatStyle.css">
-    <script src="code.js"></script>
+    <link rel="stylesheet" href="../css/ChordStyle.css">
+    <script src="../js/Chord.js"></script>
 </head>
 <body>
     <div class="banner">
         <h1>Basics of Chord Progressions</h1>
         <button id="modeToggle">Light</button>
-        <a class = "backToMain" title="Back to Main" href="Home.html">Back to Main</a>
+        <a class="backToMain" title="Back to Main" href="Home.html">Back to Main</a>
     </div>
+
     <div class="headings">
-        <a class = "link" title = "Go to Basics of DAWs" href ="/Final Project/html/BasicsOfDaws.html">Basics of DAWs</a>
-        <a class = "link" title = "Go to Basics of Beat Production" href ="/Final Project/html/Beat.html">Basics of Beat Production</a>
-        <a class = "link" title = "Go to Basics of Chord Progressions" href ="/Final Project/html/Chord.html">Basics of Chord Progressions</a>
-        <a class = "link" title = "Go to Mixing & Mastering" href ="/Final Project/html/Mixing.html">Mixing & Mastering</a>
-        <a class = "link" title = "Go to Plugins & Other Resources" href ="/Final Project/html/Other.html">Plugins & Other Resources</a>class = "link" title = "Go to Plugins & Other Resources" href ="Other.html">Plugins & Other Resources</a>
+        <a class="link" title="Go to Basics of DAWs" href="BasicsOfDaws.html">Basics of DAWs</a>
+        <a class="link" title="Go to Basics of Beat Production" href="Beat.html">Basics of Beat Production</a>
+        <a class="link" title="Go to Basics of Chord Progressions" href="Chord.html">Basics of Chord Progressions</a>
+        <a class="link" title="Go to Mixing & Mastering" href="Mixing.html">Mixing & Mastering</a>
+        <a class="link" title="Go to Plugins & Other Resources" href="Other.html">Plugins & Other Resources</a>
     </div>
+
     <div class="container">
-            
-            <div class="center">
-                <h2>Chord Progressions</h2>
-                <div class="about">  
-                    <img class = "imgLeft" width = "50%" src="Screenshot 2023-09-18 230915.png"></img>
-                    <a>This is the about me</a>
-                </div>
-            </div>
-            <div class="rightColumn">
-                <a class = "link" title = "Go to Basics of DAWs" href ="DAW.html">link 1</a>
-                <a class = "link" title = "Go to Basics of DAWs" href ="DAW.html">link 1</a>
-                <a class = "link" title = "Go to Basics of DAWs" href ="DAW.html">link 1</a>
-                <img class = "img" src="Screenshot 2023-09-18 230915.png"></img>
-                <img class = "img" src="Screenshot 2023-09-18 230915.png"></img>
-            </div>
-        </div> 
-    <div class="music">
-        <h1>Try it Yourself</h1>
-        <div class="sequencer">
-            <div class="row" data-sound="piano">
-                <span class="label">Keys</span>
-                <div class="beat" data-step="0"></div>
-                <div class="beat" data-step="1"></div>
-                <div class="beat" data-step="2"></div>
-                <div class="beat" data-step="3"></div>
-                <div class="beat" data-step="4"></div>
-                <div class="beat" data-step="5"></div>
-                <div class="beat" data-step="6"></div>
-                <div class="beat" data-step="7"></div>
-                <div class="beat" data-step="8"></div>
-                <div class="beat" data-step="9"></div>
-                <div class="beat" data-step="10"></div>
-                <div class="beat" data-step="11"></div>
+        <div class="center">
+            <h2>Chord Progressions</h2>
+            <div class="about">  
+                <img class="imgLeft" width="50%" src="../images/chordNote.png" alt="Chord Progression Diagram">
+                <p>
+                    A chord progression is a sequence of chords played in succession to create a harmonic foundation for a song.
+                    Different progressions strongly determine the tone and emotion of a song.
+                </p>
+                <br>
+                <p>    
+                    Click on the links above to explore more about chord progressions and music theory!
+                </p>
             </div>
         </div>
-        <audio id="piano" src="Music Files/piano/A1.wav"></audio>
-    </div>     
+
+        <div class="rightColumn">
+            <a class="link" title="Common Chord Progressions" target="_blank" href="https://www.musicianonamission.com/chord-progressions/">Common Chord Progressions</a>
+            <a class="link" title="Beginner Piano Chords" target="_blank" href="https://www.musicradar.com/how-to/how-to-create-a-simple-chord-progression-in-your-daw">Beginner Chords</a>
+            <a class="link" title="Circle of Fifths Guide" target="_blank" href="https://www.musical-u.com/learn/how-to-use-circle-fifths/">Circle of Fifths Guide</a>
+            <img class="img" src="../images/chordChart.png" alt="Chord Chart">
+            <img class="img" src="../images/pianoKeys.png" alt="Piano Keys">
+        </div>
+    </div> 
+
+    <div class="music">
+        <h1>Try it Yourself</h1>
+        <p>Click on the squares below to play different chord notes.</p>
+        <div class="chord-buttons">
+            <button class="chord-btn" data-chord="Cmaj">C Major</button>
+            <button class="chord-btn" data-chord="Gmaj">G Major</button>
+            <button class="chord-btn" data-chord="Amin">A Minor</button>
+            <button class="chord-btn" data-chord="Fmaj">F Major</button>
+        </div>
+
+        <div class="piano">
+            <div class="key white" data-note="C"></div>
+            <div class="key black" data-note="C#"></div>
+            <div class="key white" data-note="D"></div>
+            <div class="key black" data-note="D#"></div>
+            <div class="key white" data-note="E"></div>
+            <div class="key white" data-note="F"></div>
+            <div class="key black" data-note="F#"></div>
+            <div class="key white" data-note="G"></div>
+            <div class="key black" data-note="G#"></div>
+            <div class="key white" data-note="A"></div>
+            <div class="key black" data-note="A#"></div>
+            <div class="key white" data-note="B"></div>
+            <div class="key white" data-note="C2"></div>
+        </div>
+    </div>
+
+    <audio id="Cmaj" src="../music-files/piano/Cmaj.wav"></audio>
+    <audio id="Gmaj" src="../music-files/piano/Gmaj.wav"></audio>
+    <audio id="Amin" src="../music-files/piano/Amin.wav"></audio>
+    <audio id="Fmaj" src="../music-files/piano/Fmaj.wav"></audio>   
+    <audio id="C" src="../music-files/piano/C.wav"></audio>
+    <audio id="C#1" src="../music-files/piano/C-sharp1.wav"></audio>
+    <audio id="D" src="../music-files/piano/D.wav"></audio>
+    <audio id="D#1" src="../music-files/piano/D-sharp1.wav"></audio>
+    <audio id="E" src="../music-files/piano/E.wav"></audio>
+    <audio id="F" src="../music-files/piano/F.wav"></audio>
+    <audio id="F#1" src="../music-files/piano/F-sharp1.wav"></audio>
+    <audio id="G" src="../music-files/piano/G.wav"></audio>
+    <audio id="G#1" src="../music-files/piano/G-sharp1.wav"></audio>
+    <audio id="A" src="../music-files/piano/A.wav"></audio>
+    <audio id="A#1" src="../music-files/piano/A-sharp1.wav"></audio>
+    <audio id="B" src="../music-files/piano/B.wav"></audio>
+    
     <div class="footer">
-        <p><a class = "link" title = "Go to Email" href="mailto:ezguro@albany.edu">Email Me!</a></p>
+        <p><a class="link" title="Go to Email" href="mailto:ezguro@albany.edu">Email Me!</a></p>
     </div>
 </body>
 </html>
