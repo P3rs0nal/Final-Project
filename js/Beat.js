@@ -1,51 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("modeToggle");
-    if (localStorage.getItem("modeToggle") === "light") {
-        document.body.classList.add("light");
-        button.textContent = "Dark";
-    }
-    button.addEventListener("click", modeToggle);
-});
-
-function modeToggle(){
-    const body = document.body;
-    const button = document.getElementById("modeToggle");
-    body.classList.toggle("light");
-    const light = body.classList.contains("light");
-
-    if(light){
-        button.textContent = "Dark";
-        localStorage.setItem("modeToggle", "light")
-    }
-    else{
-        button.textContent = "Light";
-        localStorage.setItem("modeToggle", "dark")
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const beats = document.querySelectorAll(".beat");
+    const beats = document.querySelectorAll(".beat"); //Find all beats
     const playButton = document.getElementById("playButton");
     let isPlaying = false;
     let currentStep = 0;
     let interval;
-    const totalS = 12;
+    const totalSteps = 12;
 
-    // Toggle beat activation on click
+    // Allow user to click beat
     beats.forEach(beat => {
         beat.addEventListener("click", function () {
-            this.classList.toggle("active");
+            beat.classList.toggle("active");
         });
     });
 
-    // Function to play the beat sequence
     function playSequence() {
         const steps = document.querySelectorAll(`[data-step="${currentStep}"]`);
-
         steps.forEach(step => {
+            // Play if selected
             if (step.classList.contains("active")) {
                 const sound = document.getElementById(`${step.parentNode.dataset.sound}-sound`);
-                if (sound) {
+                if (sound) { //Check if sound exists
                     sound.currentTime = 0;
                     sound.play();
                 }
@@ -55,18 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             steps.forEach(step => step.classList.remove("playing")); // Remove highlight after playing
-        }, 200);
+        }, 150);
 
-        currentStep = (currentStep + 1) % totalS; // Loop through 4 steps
+        currentStep = (currentStep + 1) % totalSteps; // Loop through steps
     }
 
-    // Toggle playback on button click
+    // Play/stop button logic & tempo
     playButton.addEventListener("click", function () {
         if (isPlaying) {
             clearInterval(interval);
             playButton.textContent = "Play";
         } else {
-            interval = setInterval(playSequence, 150); // Play every 500ms
+            interval = setInterval(playSequence, 300); // 300ms tempo
             playButton.textContent = "Stop";
         }
         isPlaying = !isPlaying;

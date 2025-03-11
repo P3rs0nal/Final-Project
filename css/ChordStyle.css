@@ -237,31 +237,115 @@ body.light .about{
     height: 140px;
     background-color: black;
     position: absolute;
-    z-index: 1;
+    cursor: pointer;
+    z-index: 2;
     top: 0;
+    left: 0;
 }
 
-.key[data-note="C#"] {
-    left: 35px;
+.note-name{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    bottom: 20px;
+    color: #000000;
+    font-weight: bold;
+    left: 0;
 }
 
-.key[data-note="D#"] {
-    left: 85px;
+.key.black .note-name {
+    bottom: 25px;
+    color: #ffffff;
+    font-size: 10px;
 }
 
-.key[data-note="F#"] {
-    left: 185px;
+/* .5 notes over */
+.key[data-note="C#1"] {
+    left: 37px;
 }
 
-.key[data-note="G#"] {
-    left: 235px;
+/* 1.5 notes over */
+.key[data-note="D#1"] {
+    left: 87px;
 }
 
-.key[data-note="A#"] {
-    left: 285px;
+/* 3.5 notes over */
+.key[data-note="F#1"] {
+    left: 187px;
+}
+
+/* 4.5 notes over */
+.key[data-note="G#1"] {
+    left: 237px; /* Between G and A */
+}
+
+/* 5.5 notes over */
+.key[data-note="A#1"] {
+    left: 287px; /* Between A and B */
 }
 
 .key:active {
     background-color: #ffdc00;
     box-shadow: 0 0 10px rgba(255, 220, 0, 0.8);
+}
+
+.key.active{
+    background-color: #ffdc00;
+    box-shadow: 0 0 10px rgba(255, 220, 0, 0.8);
+}
+
+#play-progression{
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #004d26;
+    color: #aaffaa;
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#play-progression:hover {
+    background-color: #008040;
+    box-shadow: 0px 0px 8px #00ff7f;
+}
+
+body.light #play-progression {
+    background-color: #b0ffb0;
+    color: #0a0f0d;
+}
+
+body.light #play-progression:hover {
+    background-color: #98fb98;
+}
+
+
+#clear-progression{
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #004d26;
+    color: #aaffaa;
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#clear-progression:hover {
+    background-color: #008040;
+    box-shadow: 0px 0px 8px #00ff7f;
+}
+
+body.light #clear-progression {
+    background-color: #b0ffb0;
+    color: #0a0f0d;
+}
+
+body.light #clear-progression:hover {
+    background-color: #98fb98;
 }

@@ -6,6 +6,7 @@
     <title>CINF201 Final Project</title>
     <link rel="stylesheet" href="../css/ChordStyle.css">
     <script src="../js/Chord.js"></script>
+    <script src="../js/Mode.js"></script>
 </head>
 <body>
     <div class="banner">
@@ -20,6 +21,7 @@
         <a class="link" title="Go to Basics of Chord Progressions" href="Chord.html">Basics of Chord Progressions</a>
         <a class="link" title="Go to Mixing & Mastering" href="Mixing.html">Mixing & Mastering</a>
         <a class="link" title="Go to Plugins & Other Resources" href="Other.html">Plugins & Other Resources</a>
+        <a class="link" title="Go to Credits" href="Credits.html">Credits</a>
     </div>
 
     <div class="container">
@@ -56,41 +58,43 @@
             <button class="chord-btn" data-chord="Amin">A Minor</button>
             <button class="chord-btn" data-chord="Fmaj">F Major</button>
         </div>
-
+        <p id="chord-progression">Current Progression:</p>
+        <p id="chord-info">Select a chord above to see its notes</p>
         <div class="piano">
-            <div class="key white" data-note="C"></div>
-            <div class="key black" data-note="C#"></div>
-            <div class="key white" data-note="D"></div>
-            <div class="key black" data-note="D#"></div>
-            <div class="key white" data-note="E"></div>
-            <div class="key white" data-note="F"></div>
-            <div class="key black" data-note="F#"></div>
-            <div class="key white" data-note="G"></div>
-            <div class="key black" data-note="G#"></div>
-            <div class="key white" data-note="A"></div>
-            <div class="key black" data-note="A#"></div>
-            <div class="key white" data-note="B"></div>
-            <div class="key white" data-note="C2"></div>
+            <div class="key white" data-note="C"><span class="note-name">C</span></div>
+            <div class="key black" data-note="C#1"><span class="note-name">C#</span></div>
+            <div class="key white" data-note="D"><span class="note-name">D</span></div>
+            <div class="key black" data-note="D#1"><span class="note-name">D#</span></div>
+            <div class="key white" data-note="E"><span class="note-name">E</span></div>
+            <div class="key white" data-note="F"><span class="note-name">F</span></div>
+            <div class="key black" data-note="F#1"><span class="note-name">F#</span></div>
+            <div class="key white" data-note="G"><span class="note-name">G</span></div>
+            <div class="key black" data-note="G#1"><span class="note-name">G#</span></div>
+            <div class="key white" data-note="A"><span class="note-name">A</span></div>
+            <div class="key black" data-note="A#1"><span class="note-name">A#</span></div>
+            <div class="key white" data-note="B"><span class="note-name">B</span></div>
+            <div class="key white" data-note="C2"><span class="note-name">C</span></div>
         </div>
+        
     </div>
 
-    <audio id="Cmaj" src="../music-files/piano/Cmaj.wav"></audio>
-    <audio id="Gmaj" src="../music-files/piano/Gmaj.wav"></audio>
-    <audio id="Amin" src="../music-files/piano/Amin.wav"></audio>
-    <audio id="Fmaj" src="../music-files/piano/Fmaj.wav"></audio>   
-    <audio id="C" src="../music-files/piano/C.wav"></audio>
-    <audio id="C#1" src="../music-files/piano/C-sharp1.wav"></audio>
-    <audio id="D" src="../music-files/piano/D.wav"></audio>
-    <audio id="D#1" src="../music-files/piano/D-sharp1.wav"></audio>
-    <audio id="E" src="../music-files/piano/E.wav"></audio>
-    <audio id="F" src="../music-files/piano/F.wav"></audio>
-    <audio id="F#1" src="../music-files/piano/F-sharp1.wav"></audio>
-    <audio id="G" src="../music-files/piano/G.wav"></audio>
-    <audio id="G#1" src="../music-files/piano/G-sharp1.wav"></audio>
-    <audio id="A" src="../music-files/piano/A.wav"></audio>
-    <audio id="A#1" src="../music-files/piano/A-sharp1.wav"></audio>
-    <audio id="B" src="../music-files/piano/B.wav"></audio>
-    
+    <button id="play-progression">Play</button>
+    <button id="clear-progression">Clear</button>
+ 
+    <audio id="C" src="../Music Files/piano/C4.mp3"></audio>
+    <audio id="C#1" src="../Music Files/piano/Cs4.wav"></audio>
+    <audio id="D" src="../Music Files/piano/D4.wav"></audio>
+    <audio id="D#1" src="../Music Files/piano/Ds4.wav"></audio>
+    <audio id="E" src="../Music Files/piano/E4.wav"></audio>
+    <audio id="F" src="../Music Files/piano/F4.wav"></audio>
+    <audio id="F#1" src="../Music Files/piano/Fs4.wav"></audio>
+    <audio id="G" src="../Music Files/piano/G4.wav"></audio>
+    <audio id="G#1" src="../Music Files/piano/Gs4.wav"></audio>
+    <audio id="A" src="../Music Files/piano/A4.wav"></audio>
+    <audio id="A#1" src="../Music Files/piano/As4.wav"></audio>
+    <audio id="B" src="../Music Files/piano/B4.wav"></audio>
+    <audio id="C2" src="../Music Files/piano/C5.wav"></audio>
+
     <div class="footer">
         <p><a class="link" title="Go to Email" href="mailto:ezguro@albany.edu">Email Me!</a></p>
     </div>
