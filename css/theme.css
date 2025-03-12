@@ -31,12 +31,9 @@
 
     .backToMain {
         text-wrap: wrap;
-        padding-top: 10px;
-        margin-top: 10px;
-        /* padding: 2px 6px; */
         font-size: smaller;
         max-width: 50px;
-        max-height: 50px;
+        max-height: 50px; 
     }
     
 }
@@ -91,8 +88,8 @@ body.light #modeToggle {
 }
 
 .backToMain {
-    bottom: 10px;
-    left: 10px;
+    bottom: 0px;
+    left: 0px;
     padding: 9px 15px;
     position: absolute;
     border: 2px solid black;
