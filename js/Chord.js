@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function highlightKey(note, dura) {
+    function highlightKey(note) {
         const key = document.querySelector(`.key[data-note="${note}"]`);
         if (key) {
             key.classList.add("active");
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Play chord sequence
     playProgressionButton.addEventListener("click", function () {
         let delay = 0;
-        selectedChords.forEach((chord, index) => {
+        selectedChords.forEach((chord) => {
             setTimeout(() => {
                 playChord(chord);
                 highlightChordKeys(chord);

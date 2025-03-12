@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINF201 Final Project</title>
+    <link rel="stylesheet" href="../css/theme.css">
     <link rel="stylesheet" href="../css/ChordStyle.css">
     <script src="../js/Chord.js"></script>
     <script src="../js/Mode.js"></script>
@@ -41,9 +42,9 @@
         </div>
 
         <div class="rightColumn">
-            <a class="link" title="Common Chord Progressions" target="_blank" href="https://www.musicianonamission.com/chord-progressions/">Common Chord Progressions</a>
-            <a class="link" title="Beginner Piano Chords" target="_blank" href="https://www.musicradar.com/how-to/how-to-create-a-simple-chord-progression-in-your-daw">Beginner Chords</a>
-            <a class="link" title="Circle of Fifths Guide" target="_blank" href="https://www.musical-u.com/learn/how-to-use-circle-fifths/">Circle of Fifths Guide</a>
+            <a class="newLink" title="Common Chord Progressions" target="_blank" href="https://www.musicianonamission.com/chord-progressions/">Common Chord Progressions</a>
+            <a class="newLink" title="Beginner Piano Chords" target="_blank" href="https://www.musicradar.com/how-to/how-to-create-a-simple-chord-progression-in-your-daw">Beginner Chords</a>
+            <a class="newLink" title="Circle of Fifths Guide" target="_blank" href="https://www.musical-u.com/learn/how-to-use-circle-fifths/">Circle of Fifths Guide</a>
             <img class="img" src="../images/chordChart.png" alt="Chord Chart">
             <img class="img" src="../images/pianoKeys.png" alt="Piano Keys">
         </div>
@@ -51,7 +52,7 @@
 
     <div class="music">
         <h1>Try it Yourself</h1>
-        <p>Click on the squares below to play different chord notes.</p>
+        <p>Click on the squares below to play and add chords to a progression.</p>
         <div class="chord-buttons">
             <button class="chord-btn" data-chord="Cmaj">C Major</button>
             <button class="chord-btn" data-chord="Gmaj">G Major</button>
@@ -59,7 +60,7 @@
             <button class="chord-btn" data-chord="Fmaj">F Major</button>
         </div>
         <p id="chord-progression">Current Progression:</p>
-        <p id="chord-info">Select a chord above to see its notes</p>
+        <p id="chord-info"></p>
         <div class="piano">
             <div class="key white" data-note="C"><span class="note-name">C</span></div>
             <div class="key black" data-note="C#1"><span class="note-name">C#</span></div>
